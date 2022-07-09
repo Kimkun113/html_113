@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Please enter your password here</h1>
+    <input type="password" id="pass">
+    <button onclick="kiemtra()">Enter</button>
+    <p id="result1">1</p>
+    <p id="result2">2</p>
+    
+</body>
+<script>
+    function kiemtra(){
+        let pass=document.getElementById("pass").value
+        
+      
+
+        let count=1
+    for(let i=1;i<=5;i++){
+       
+        if(pass==12345){
+            document.write("Đăng nhập thành công")
+            break;
+        }else{
+            pass=prompt("Nhập sai mật khẩu quá 5 lần sẽ bị khóa tài khoản" )
+           count++
+        }
+       
+   
+    }
+    if(count>5){
+            document.write("Tài khoản của bạn đã bị khóa")
+    }
+        }
+</script>
+</html>
